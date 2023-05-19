@@ -1,0 +1,77 @@
+---
+import After from '../components/After.astro';
+import BeforeTheDay from '../components/BeforeTheDay.astro';
+import During from '../components/During.astro';
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import { Accordion, AccordionItem } from 'accessible-astro-components';
+---
+
+<DefaultLayout title="FAQ">
+  <div class="container">
+    <div class="my-24">
+      <h1 class="mb-10 text-gradient">FAQ - Frequently Asked Questions</h1>
+    </div>
+    <BeforeTheDay />
+    <During />
+    <After />
+    <section class="mt-10">
+      <h2 class="mb-4">Other questions about the All Staff Event</h2>
+      <div class="mx-auto max-w-2xl">
+        <Accordion>
+          <AccordionItem header="If I cannot attend, will it be broadcast on Zoom?">
+            <p>No, this will be in person only.</p>
+          </AccordionItem>
+        </Accordion>
+        <Accordion>
+          <AccordionItem header="Will the event be indoors or outdoors?">
+            <p>We’ll use the venue’s large indoor event space for our main activities. There are also some outdoor pavilions and stadium seating that you’ll be able to use during lunch, the reception, and during social time.</p>
+          </AccordionItem>
+        </Accordion>
+        <Accordion>
+          <AccordionItem header="What's the dress code?">
+            <p>Casual dress is encouraged, especially <a href="https://panda.newheadings.com/">WWF gear</a>! Please wear sneakers or other flat-bottomed shoes because shoes with heels are not permitted on the pitch if we do a group photo. </p>
+          </AccordionItem>
+        </Accordion>
+        <Accordion>
+          <AccordionItem header="Can my family members/friends come to the reception prior?">
+            <p>The reception is for staff only. Please plan to meet up with your guests after the reception.</p>
+          </AccordionItem>
+        </Accordion>
+        <Accordion>
+          <AccordionItem header="Alcohol Guidance">
+            <p>We’re looking forward to celebrating with you at the reception and Nats Park. Below are some tips that will help ensure that everyone has a good time and stays safe.</p>
+            <br>
+            <ul>
+              <li>Be sure to bring a valid ID with you if you intend to consume alcohol.</li>
+              <li>Drink responsibly and never drink and drive.</li>
+              <li>Hors d'oeuvres will be available 4:30-6 pm at our reception. And of course there’s plentiful food options at Nationals Park.</li>
+              <li>Be mindful of WWF’s <a href="https://worldwildlifefund.sharepoint.com/sites/Policies">Code of Conduct</a> as you enjoy the reception and WWF Night at Nationals Park.</li>
+            </ul>
+          </AccordionItem>
+        </Accordion>
+      </div>
+    </section>
+  </div> 
+</DefaultLayout>
+
+<style lang="scss" is:global>
+  body .accordion__item {
+    .accordion__header {
+      text-align: left;
+    }
+  }
+  h2.mb-4, h2.mb-2 {
+    margin-top: 1.5em;
+    padding: 5px 10px;
+    background: rgb(203,167,210);
+    background: linear-gradient(90deg, rgba(203,167,210,1) 0%, rgba(255,255,255,1) 80%);
+  }
+  div.accordion ul:not(.accordion__wrapper) {
+    list-style-type: disc;
+    margin-left: 2em;
+  }
+
+  .panel__inner {
+    font-size: 20px;
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+import AgendaItem from './AgendaItem.astro'
+
+const data = [
+  {
+    id: 1,
+    time: { start: '9:00 am', end: '10:00 am' },
+    title: 'Registration and Breakfast',
+    description:
+      '',
+    categories: ['food', 'info'],
+    day: 1,
+  },
+  {
+    id: 2,
+    time: { start: '10:00 am', end: '10:15 am' },
+    title: 'Welcome and Opening Remarks',
+    description:
+      '',
+    categories: ['food', 'info'],
+    day: 1,
+  },
+  {
+    id: 3,
+    time: { start: '10:15 am', end: '12:30 pm' },
+    title: 'Forests Forward - Leading the Way toward a Healthy Planet',
+    description:
+      '',
+    categories: ['session', 'announcements'],
+    day: 1,
+  },
+  {
+    id: 4,
+    time: { start: '12:30 pm', end: '1:45 pm' },
+    title: 'Lunch and Learn',
+    description:
+      '',
+    categories: ['food', 'info'],
+    day: 1,
+  },
+  {
+    id: 5,
+    time: { start: '1:45 pm', end: '2:45 pm' },
+    title: 'Healthy Oceans for the Planet, People, Prosperity, and Peace',
+    description:
+      '',
+    categories: ['session', 'speaker'],
+    day: 1,
+  },
+  {
+    id: 6,
+    time: { start: '2:45 pm', end: '4:30 pm' },
+    title: `Initiatives for Impact: The Future of Fish and Alaska's Ocean Communites`,
+    description:
+      '',
+    categories: ['session', 'speaker'],
+    day: 1,
+  },
+  {
+    id: 8,
+    time: { start: '4:30pm', end: '?' },
+    title: 'Closing Remarks and Networking Reception',
+    description: "",
+    categories: ['info'],
+    day: 1,
+  },
+  {
+    id: 9,
+    time: { start: '9:00am', end: '9:50am' },
+    title: 'Breakfast and social time',
+    description: "",
+    categories: ['info'],
+    day: 2,
+  },
+  {
+    id: 10,
+    time: { start: '10:00am', end: '?' },
+    title: 'Depart for Capitol Hill',
+    description: "",
+    categories: ['info'],
+    day: 2,
+  },
+  {
+    id: 11,
+    time: { start: '11:00am', end: '4:00pm' },
+    title: `Capitol Hill Ocean Week events and tour of the Smithsonian Natural History Museum's Sant Ocean Hall`,
+    description: "",
+    categories: ['info'],
+    day: 2,
+  },
+]
+---
+
+<section class="agenda">
+  <ul>
+    {data.map((item, index) => <AgendaItem item={item} />)}
+  </ul>
+</section>

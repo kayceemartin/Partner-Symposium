@@ -1,0 +1,64 @@
+---
+import { Modal } from 'accessible-astro-components'
+const { item } = Astro.props;
+
+const speakerBio = (itemSpeakerBio) => {
+  return `<a href="/guest-speakers${itemSpeakerBio}">Read her full biography</a>`;
+}
+---
+
+{item && (<li>
+  <div class="time-banner bg-gradient-to-r from-blue-300 to bg-purple-500 sticky top-0">
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <p class="text-2xl leading-6 text-gray-900"> <strong class="font-semibold ml-5">{item.time.start} - {item.time.end}</strong> </p>
+    </div>
+  </div>
+  <div class="content mt-2 mb-4">
+    <div class:list={['agenda-item',{'md:max-w-[75%]': !item.sessions, 'ml-10': !item.sessions}]}>
+      <div class="agenda-item__content">
+        {item.sessions && (
+          <div class="emjoi-title flex flex-row">
+            <h3 class="agenda-item__title">{item.title}</h3>
+          </div>
+        )}
+        {!item.sessions && <h3 class="agenda-item__title">{item.title}</h3>}
+        <p class="agenda-item__description" set:html={`${item.description}${item.speakerBio !== undefined ? '<br><br>' + speakerBio(item.speakerBio) : ''}`}></p> 
+        {item.speaker && <p class="agenda-item__speaker italic mt-1" set:html={item.speaker}></p>}
+        {item.categories.includes("QA") && (
+          <div class="agenda-item__qa mt-2">
+            <button id={`modal-${item.id}`}>Ask a question</button>
+          </div>
+          <Modal triggerId={`modal-${item.id}`} closeText="close">
+            <div class="agenda-item__qa-form w-full">
+              <iframe class="airtable-embed" src="https://airtable.com/embed/shrO6Uqjojq95cfPs?backgroundColor=cyanDusty" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            </div>
+          </Modal>
+        )}
+      </div>
+      {item.sessions && (
+        <div class="agenda-item__sessions">
+          <div class="agenda-item__session bg-green-200 rounded-md">
+            <div class='flex flex-col lg:flex-row justify-around p-4'>
+              {item.sessions.map((session, index) => (
+                <h4 class="agenda-item__session-title pb-4" set:html={session.title}></h4>
+              ))}
+            </div>
+            <div class="p-4">
+              <p class="mb-4"><strong>Lunch: </strong>During your designated lunch period, please join us in the Director's Lounge for a buffet of salads, sandwiches, and sides. You may take your lunch to the outdoor patio, the stadium seating areas, the lounge nooks throughout the space, or the tables on the main event floor. The exhibit hall is also open during your lunch hour.</p>
+              <p class="mb-4"><strong>Breakouts: </strong>During your designated breakout period, look for your suite assignment on the back of your name badge. The suites are located up the stairs from the main event floor. Each suite has been assigned a leader who will provide instructions.</p>
+              <p><strong>Exhibit Hall is open</strong></p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</li>)}
+
+<style lang="scss" is:global>
+  @media (max-width: 767px) {
+    .modal__inner {
+      width: 100vw;
+    }
+  }
+</style>

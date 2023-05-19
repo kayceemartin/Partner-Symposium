@@ -1,0 +1,26 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import { Notification } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Home">
+  <!--<div class="container">
+    <Notification type="warning">
+      <p><strong>Arrival time change: </strong>Doors will now open at 9:30 am (not 9 am). Plan to arrive at the Premium Entry between 9:30-10 am. Note that there may be a short wait at the entrance as all will be passing through security and a metal detector. (If you’re unable or prefer not to go through a metal detector, ask for a wand inspection.)</p>
+    </Notification>
+  </div> -->
+  <Hero />
+  <section class="container">
+    <p>
+      Join your fellow Partners in Conservation and other committed WWF supporters for an exclusive event at WWF headquarters in Washington, DC! The 2023 Partner Symposium begins on Monday June 5 with a deep dive into our work with people and communities to protect, restore, and nurture the world’s most ecologically important forests and oceans. Together we will explore the innovative ways we are developing and delivering solutions that protect vital ocean and forest ecosystems and the abundance of life they support.
+      
+      This two-day event continues Tuesday with sessions that coincide with Capitol Hill Ocean Week (CHOW). This annual event is convened in conjunction with other ocean-focused nonprofit partners and brings people together in the spirit of ocean conservation. The Partner Symposium concludes as CHOW begins, so if you are interested in learning more about ocean conservation, you might consider staying in DC through Thursday to participate in Ocean Week official programming. <a href="https://preconvirtual.com/chow-2023-agenda/">Learn more about CHOW here.</a>
+    </p>
+    <p>
+      When considering your travel plans, we suggest you arrive in DC over the weekend for a Monday morning start. The Symposium will end on Tuesday afternoon, so departing flights that evening would allow you to participate in most/all of the programming.
+      
+      If you have any questions, please contact us at (888) 993-1100 or <a href="mailto:partners@wwfus.org">partners@wwfus.org</a>. We look forward to seeing you in June!
+    </p>
+  </section>
+</DefaultLayout>
