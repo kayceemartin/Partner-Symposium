@@ -1,10 +1,8 @@
-# WWF All Together Day
+# 2023 Partner Symposium
 
 ## Todo
 
-- change url in SiteMeta
-- Hero should have the current DayStatus, but also have links to other parts of the status.
-- DayStatus should have an arrow that points to the current status.
+- 
 
 # Accessible Astro Starter
 
