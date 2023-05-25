@@ -12,24 +12,18 @@ const { src ='partner_symposium/public/PartnerSymposium_yellow.png' } = Astro.pr
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-black">WWF Partner Symposium</span></slot>
+          <slot><span class="text-green-800">WWF Partner Symposium</span></slot>
         </h1>
         <div class="flex flex-wrap justify-center md:flex-nowrap gap-3">
           <a class="button has-icon color-neutral" href="/agenda">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M256 48C141.13 48 48 141.13 48 256c0 114.69 93.32 208 208 208c114.86 0 208-93.14 208-208c0-114.69-93.31-208-208-208Zm108 240H244a4 4 0 0 1-4-4V116a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v140h92a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4Z"/></svg>
             Agenda
           </a>
-          <a
-            class="button has-icon color-neutral"
-            href="/guest-speakers/"
-          >
+          <a class="button has-icon color-neutral" href="/guest-speakers/">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10 19h3v3h-3v-3m2-17c5.35.22 7.68 5.62 4.5 9.67c-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08c.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z"/></svg>
             Speakers
           </a>
-          <a
-            class="button has-icon color-neutral"
-            href="/how-to-get-there"
-          >
+          <a class="button has-icon color-neutral" href="/how-to-get-there">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C167.67 32 96 96.51 96 176c0 128 160 304 160 304s160-176 160-304c0-79.49-71.67-144-160-144Zm0 224a64 64 0 1 1 64-64a64.07 64.07 0 0 1-64 64Z"/></svg>
             Location
           </a>
