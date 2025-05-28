@@ -2740,7 +2740,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.58.0
     accessible-astro-components: ^1.6.6
     astro: ^2.3.0
-    astro-compress: 2.3.8
+    astro-compress: ^2.3.8
     astro-icon: ^0.8.0
     astro-imagetools: ^0.8.1
     eslint: ^8.38.0
@@ -2987,7 +2987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:2.3.8":
+"astro-compress@npm:^2.3.8":
   version: 2.3.8
   resolution: "astro-compress@npm:2.3.8"
   dependencies:
