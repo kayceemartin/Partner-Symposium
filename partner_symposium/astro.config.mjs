@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import compressor from 'astro-compressor';;
+//import compressor from 'astro-compressor';;
 import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 import { astroImageTools } from 'astro-imagetools';
@@ -9,5 +9,5 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [compressor(), mdx(), tailwind(), astroImageTools, react(), partytown()]
+  integrations: [mdx(), tailwind(), astroImageTools, react(), partytown()]
 });
