@@ -7,7 +7,7 @@ import react from "@astrojs/react";
 
 import partytown from "@astrojs/partytown";
 
-// https://astro.build/config
+
 export default defineConfig({
   integrations: [mdx(), tailwind(), astroImageTools, react(), partytown()]
 });
